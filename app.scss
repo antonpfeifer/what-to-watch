@@ -1,0 +1,559 @@
+
+
+body {
+    background-color: #1b1b1b;
+  }
+          h1   {color: rgb(255, 255, 255);font-family: "Roboto";text-shadow: black;}
+          .description
+          {color: rgb(255, 255, 255);font-family: "Roboto";margin-bottom: 100px;}
+          html {
+              scroll-behavior: smooth;
+          }
+          .header {
+              color: rgb(238, 53, 53);
+              margin-top: 20;
+              margin-bottom: 5px;
+              padding: 5px;
+          }
+          #box1 {
+    position: relative;
+  }
+  .rslider {
+    position: absolute;
+    transition: 0.5s;
+  }
+  .rs-handle {
+    background-color: #f3f3f3;
+    box-shadow: 0px 0px 4px 0px #000;
+  }
+  
+  #slider1 .rs-tooltip {
+      font-size: 50px;
+      font-family: "Roboto";
+  }
+  #slider2 .rs-tooltip {
+      font-size: 50px;
+      font-family: "Roboto";
+  }
+  #slider3 .rs-tooltip {
+      font-size: 50px;
+      font-family: "Roboto";
+  }
+  #slider4 .rs-tooltip {
+      font-size: 50px;
+      font-family: "Roboto";
+  }
+  #slider5 .rs-tooltip {
+      font-size: 50px;
+      font-family: "Roboto";
+  }
+  #slider6 .rs-tooltip {
+      font-size: 50px;
+      font-family: "Roboto";
+  }
+  #slider7 .rs-tooltip {
+      font-size: 50px;
+      font-family: "Roboto";
+  }
+  #slider8 .rs-tooltip {
+      font-size: 50px;
+      font-family: "Roboto";
+  }
+  #slider1 .rs-control .rs-range-color {
+    background-color: #61e054;
+}
+#slider1 .rs-control .rs-path-color {
+    background-color: white;
+}
+#slider1 .rs-control .rs-handle {
+    background-color: #838383;
+}
+#slider1 .rs-control .rs-bg-color {
+    background-color: white;
+}
+  
+  .box0 {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+  }
+  
+  .box1 {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    max-width: 1000px;
+    flex-wrap: wrap;
+  }
+  
+  .box1 > div {
+    width: 160px;
+    margin-bottom: 60px;
+    margin-left: 40px;
+    margin-right: 40px;
+    text-align: center;
+    line-height: 50px;
+    font-size: 20px;
+    font-family: "Roboto";
+    color: rgb(255, 255, 255);
+  }
+  .box_search {
+      height: 70px;
+      border-style: solid;
+      color: rgb(27, 27, 27);
+  }
+  .search input[type=text] { 
+    float: right;
+    width: 150px;
+    margin-left: 30px;
+    margin-right: 10px;
+    text-align: center;
+    line-height: 30px;
+    font-family: "Roboto";
+    border: none;
+    margin-top: 15px;
+    font-size: 17px;
+    background-color: rgb(27, 27, 27);
+    color: white;
+  }
+  .dropbtn {
+    color: white;
+    margin: 16px;
+    border: none;
+    cursor: pointer;
+    filter: contrast(70%);
+  }
+  
+  .dropbtn:hover, .dropbtn:focus {
+    filter: contrast(100%);
+    transition: 0.3s;
+  }
+  
+  .dropdown {
+    position: relative;
+    display: inline-block;
+  }
+  
+  .dropdown-content {
+    display: none;
+    position: absolute;
+    background-color: #f1f1f1;
+    border-radius: 3px;
+    min-width: 160px;
+    overflow: auto;
+    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+    z-index: 1;
+  }
+  
+  .dropdown-content p {
+    color: black;
+    padding: 12px 16px;
+    text-decoration: none;
+    display: block;
+    cursor: pointer;
+    font-family: Roboto;
+  }
+  
+  .dropdown p:hover {background-color: #ddd; transition: 0.2s;}
+  
+  .show {display: block;}
+  .settings {
+      left: 20%;
+      margin-top: 5px;
+      margin-left: 40px;
+      padding-left: 35px;
+      padding-top: 6px;
+  }
+  .company_name {
+      text-align: center;
+      font-size: 17px;
+      margin-top: 10px;
+      left: 50%;
+      margin-left: -50%;
+      
+  }
+  .boxbutton {
+    margin-top: 30px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+  }
+  .button {
+    border-radius: 4px;
+    background-color: #e05477;
+    border: none;
+    color: rgb(255, 255, 255);
+    text-align: center;
+    font-size: 20px;
+    padding: 20px;
+    width: 150px;
+    transition: all 0.5s;
+    cursor: pointer;
+    margin: 5px;
+    margin-bottom: 50px;
+    font-family: "Roboto";
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.397), 0 6px 20px 0 rgba(0, 0, 0, 0.37);
+  }
+  .button span {
+    cursor: pointer;
+    display: inline-block;
+    position: relative;
+    transition: 0.5s;
+  }
+  .button span:after {
+    content: '\00bb';
+    position: absolute;
+    opacity: 0;
+    top: 0;
+    right: -20px;
+    transition: 0.5s;
+  }
+  .button:hover span {
+    padding-right: 25px;
+  }
+  .button:hover {
+    box-shadow: 0 4px 8px 0 rgb(0, 0, 0), 0 6px 20px 0 rgb(0, 0, 0);
+  }
+  .button:hover span:after {
+    opacity: 1;
+    right: 0;
+  }
+  .tickboxes {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    margin-bottom: 100px;
+    border-radius: 4px;
+  }
+  .tickboxes > label {
+        width: auto;
+        margin-left: 10px;
+        margin-right: 10px;
+  }
+  b {
+    border-radius: 4px;
+    cursor: pointer;
+    transition: all 0.5s;
+    padding: 10px;
+    margin: 10px;
+    -webkit-filter: opacity(50%);
+    filter:opacity(50%);
+  }
+  b:hover {
+    transition: 0.5s;
+    -webkit-filter: opacity(70%);
+    filter: opacity(70%);
+  }
+  b:hover > img {
+    transition: all 0.4s;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.856), 0 6px 20px 0 rgba(0, 0, 0, 0.822);
+  }
+  b.down {
+    border-radius: 4px;
+    cursor: pointer;
+    transition: all 0.5s;
+    padding: 10px;
+    margin: 10px;
+    -webkit-filter: opacity(100%);
+    filter: opacity(100%);
+  }
+  a {
+    color: rgb(190, 190, 190);
+    border-radius: 4px;
+    border: none;
+    background-color: rgb(43, 43, 43);
+    cursor: pointer;
+    transition: all 0.5s;
+    font-family: "Roboto";
+    text-align: center;
+    padding: 10px;
+    margin: 10px;
+  }
+  a:hover {
+    color: rgb(255, 255, 255);
+    transition: 0.5s;
+  }
+  
+  a.down {
+    border-radius: 4px;
+    border: none;
+    background-color: #53badf;
+    color: white;
+    cursor: pointer;
+    transition: all 0.5s;
+    font-family: "Roboto";
+    text-align: center;
+    padding: 10px;
+  }
+  .tickheader {
+      text-align: center;
+      font-family: Roboto;
+      font-size: 25px;
+      color: white;
+      margin-bottom: 40px;
+  }
+/* The container */
+.container_radio1 {
+    font-family: Roboto;
+    width: 60px;
+    display: block;
+    position: relative;
+    padding-left: 35px;
+    margin-bottom: 12px;
+    cursor: pointer;
+    font-size: 20px;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+  }
+  
+  /* Hide the browser's default radio button */
+  .container_radio1 input {
+    position: absolute;
+    opacity: 0;
+    cursor: pointer;
+  }
+  
+  /* Create a custom radio button */
+  .checkmark_radio1 {
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 25px;
+    width: 25px;
+    background-color: #eee;
+    border-radius: 50%;
+  }
+  
+  /* On mouse-over, add a grey background color */
+  .container_radio1:hover input ~ .checkmark_radio1 {
+    background-color: #ccc;
+  }
+  
+  /* When the radio button is checked, add a blue background */
+  .container_radio1 input:checked ~ .checkmark_radio1 {
+    background-color: #53badf;
+  }
+  
+  /* Create the indicator (the dot/circle - hidden when not checked) */
+  .checkmark_radio1:after {
+    content: "";
+    position: absolute;
+    display: none;
+  }
+  
+  /* Show the indicator (dot/circle) when checked */
+  .container_radio1 input:checked ~ .checkmark_radio1:after {
+    display: block;
+  }
+  
+  /* Style the indicator (dot/circle) */
+  .container_radio1 .checkmark_radio1:after {
+       top: 9px;
+      left: 9px;
+      width: 8px;
+      height: 8px;
+      border-radius: 50%;
+      background: white;
+  }
+/* The container */
+.container_radio2 {
+    font-family: Roboto;
+    width: 60px;
+    display: block;
+    position: relative;
+    padding-left: 35px;
+    margin-bottom: 12px;
+    cursor: pointer;
+    font-size: 20px;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+  }
+  
+  /* Hide the browser's default radio button */
+  .container_radio2 input {
+    position: absolute;
+    opacity: 0;
+    cursor: pointer;
+  }
+  
+  /* Create a custom radio button */
+  .checkmark_radio2 {
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 25px;
+    width: 25px;
+    background-color: #eee;
+    border-radius: 50%;
+  }
+  
+  /* On mouse-over, add a grey background color */
+  .container_radio2:hover input ~ .checkmark_radio2 {
+    background-color: #ccc;
+  }
+  
+  /* When the radio button is checked, add a blue background */
+  .container_radio2 input:checked ~ .checkmark_radio2 {
+    background-color: #54bbe0;
+  }
+  
+  /* Create the indicator (the dot/circle - hidden when not checked) */
+  .checkmark_radio2:after {
+    content: "";
+    position: absolute;
+    display: none;
+  }
+  
+  /* Show the indicator (dot/circle) when checked */
+  .container_radio2 input:checked ~ .checkmark_radio2:after {
+    display: block;
+  }
+  
+  /* Style the indicator (dot/circle) */
+  .container_radio2 .checkmark_radio2:after {
+       top: 9px;
+      left: 9px;
+      width: 8px;
+      height: 8px;
+      border-radius: 50%;
+      background: white;
+  }
+  .radio {
+    display: flex;
+    color: white;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+  }
+  .radiolabel {
+      color: white;
+      font-family: Roboto;
+      text-align: center;
+      font-size: 25px;
+      margin-bottom: 40px;
+  }
+  .radiosection {
+      margin-left: 30px;
+      margin-right: 30px;
+      margin-bottom: 40px;
+  }
+.radio > label {
+    margin-left: 10px;
+    margin-right: 10px;
+    width: auto;
+}
+
+
+
+
+
+.resultcontainercontainer {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.resultcontainer {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    max-width: 1000px;
+    flex-wrap: wrap;
+}
+.result {
+    background-color: rgb(34, 34, 34);
+    box-shadow: rgb(55, 43, 158);
+    border-radius: 6px;
+    margin: 20px;
+    height: auto;
+    width: 210px;
+    cursor: pointer;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.397), 0 6px 20px 0 rgba(0, 0, 0, 0.37);
+}
+
+.filmtitle {
+    font-family: Roboto;
+    font-size: 16px;
+    margin: 10px;
+    margin-bottom: 20px;
+}
+.filmcover {
+    margin-right: 10px;
+    border-radius: 6px;
+    width: 210px;
+    height: auto;
+    cursor: pointer;
+}
+.rslider {
+  position: absolute;
+}
+.labelout {
+  font-size: 12px;
+  color: white;
+  font-family: Roboto;
+}
+.rs-handle {
+  background-color: #f3f3f3;
+  box-shadow: 0px 0px 4px 0px #000;
+}
+.sliderout {
+  width: 210px;
+  height: auto;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.slidersliderout {
+  margin-left: 2px;
+  margin-right: 2px;
+}
+.sliderout > div {
+  margin: 7px;
+}
+
+#sliderout1 .rs-tooltip {
+    font-size: 13px;
+    color: white;
+    font-family: "Roboto";
+}
+#sliderout2 .rs-tooltip {
+  font-size: 13px;
+  color: white;
+    font-family: "Roboto";
+}
+#sliderout3 .rs-tooltip {
+  font-size: 13px;
+  color: white;
+    font-family: "Roboto";
+}
+#sliderout4 .rs-tooltip {
+  font-size: 13px;
+  color: white;
+    font-family: "Roboto";
+}
+#sliderout5 .rs-tooltip {
+  font-size: 13px;
+  color: white;
+    font-family: "Roboto";
+}
+#sliderout6 .rs-tooltip {
+  font-size: 13px;
+  color: white;
+    font-family: "Roboto";
+}
+#sliderout7 .rs-tooltip {
+  font-size: 13px;
+  color: white;
+    font-family: "Roboto";
+}
+#sliderout8 .rs-tooltip {
+  font-size: 13px;
+  color: white;
+    font-family: "Roboto";
+}

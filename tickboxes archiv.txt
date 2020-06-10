@@ -1,0 +1,54 @@
+<div class="tickboxes">
+    <div class="radiosection">
+        <div class="radiolabel">Animation/Zeichentrick</div>
+    <div class="radio">
+        <label class="container_radio1">Ja
+            <input type="radio" checked="checked" name="radio1">
+            <span class="checkmark_radio1"></span>
+          </label>
+          <label class="container_radio1">Nein
+            <input type="radio" name="radio1">
+            <span class="checkmark_radio1"></span>
+          </label>
+          <label class="container_radio1">Egal
+            <input type="radio" name="radio1">
+            <span class="checkmark_radio1"></span>
+          </label>
+        </div>
+    </div>
+    <div class="radiosection">
+        <div class="radiolabel">Familienfreundlich</div>
+    <div class="radio">
+        <label class="container_radio2">Ja
+            <input type="radio" checked="checked" name="radio2">
+            <span class="checkmark_radio2"></span>
+          </label>
+          <label class="container_radio2">Nein
+            <input type="radio" name="radio2">
+            <span class="checkmark_radio2"></span>
+          </label>
+          <label class="container_radio2">Egal
+            <input type="radio" name="radio2">
+            <span class="checkmark_radio2"></span>
+          </label>
+        </div>
+    </div>
+    <div class="radiosection">
+        <div class="radiolabel">wahre Begebenheiten
+        </div>
+    <div class="radio">
+        <label class="container_radio2">Ja
+            <input type="radio" checked="checked" name="radio3">
+            <span class="checkmark_radio2"></span>
+          </label>
+          <label class="container_radio2">Nein
+            <input type="radio" name="radio3">
+            <span class="checkmark_radio2"></span>
+          </label>
+          <label class="container_radio2">Egal
+            <input type="radio" name="radio3">
+            <span class="checkmark_radio2"></span>
+          </label>
+        </div>
+    </div>
+</div>

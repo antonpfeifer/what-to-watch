@@ -1,0 +1,231 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto">
+    <link href="https://cdn.jsdelivr.net/npm/round-slider@1.5.1/dist/roundslider.min.css" rel="stylesheet" />>
+    <link rel="stylesheet" href="app.scss">
+
+<title>what-to-watch</title>
+</head>
+
+<head>
+    <link href="https://unpkg.com/material-components-web@latest/dist/material-components-web.min.css" rel="stylesheet">
+    <script src="https://unpkg.com/material-components-web@latest/dist/material-components-web.min.js"></script>
+</head>
+
+<head>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
+</head>
+<body>
+    <div class="box_search">
+        <div class="search">
+            <input type="text" placeholder="Filme suchen...">
+        </div>
+        <div class="profile">
+            <img src="profile.png" alt="Profile" width="50" height="50">
+        </div>
+        <div class="settings">
+            <img src="settings.png" alt="Settings" width="40" height="40">
+        </div>
+    </div>
+    <div class="header">
+        <h1 style="font-size:70px;text-align:center;">Ergebnisse:</h1>
+    </div>
+<div class="resultcontainercontainer">
+<div class="resultcontainer">
+    <div class="result">
+        <img src="misimp.jpg" alt="cover1" class="filmcover" >
+        <h1 class="filmtitle">Mission Impossible: Fallout</h1>
+        <div class="sliderout">
+            <div class="cat1">
+                <div id="sliderout1" class="sliderout1" class="slidersliderout"></div>
+                <div id="label1" class="labelout" style="padding-top:20px;">Action</div>
+            </div>
+            <div class="cat2">
+                <div id="sliderout2" class="sliderout2" class="slidersliderout"></div>
+                <div id="label2" class="labelout" style="padding-top:20px;">Drama</div>
+            </div>
+            <div class="cat3">
+                <div id="sliderout3" class="sliderout3" class="slidersliderout"></div>
+                <div id="labelout3" class="labelout" style="padding-top:20px;">Fantasy</div>
+            </div>
+            <div class="cat4">
+                <div id="sliderout4" class="sliderout4" class="slidersliderout"></div>
+                <div id="label4" class="labelout" style="padding-top:20px;">Komödie</div>
+            </div>
+        </div>
+    </div>
+    <div class="result">
+        <img src="misimp.jpg" alt="cover1" class="filmcover" >
+        <h1 class="filmtitle">Mission Impossible: Fallout</h1> 
+    </div>
+    <div class="result">
+        <img src="misimp.jpg" alt="cover1" class="filmcover" >
+        <h1 class="filmtitle">Mission Impossible: Fallout</h1>
+    </div>
+    <div class="result">
+        <img src="misimp.jpg" alt="cover1" class="filmcover" >
+        <h1 class="filmtitle">Mission Impossible: Fallout</h1> 
+    </div>
+    <div class="result">
+        <img src="misimp.jpg" alt="cover1" class="filmcover" >
+        <h1 class="filmtitle">Mission Impossible: Fallout</h1>
+    </div>
+    <div class="result">
+        <img src="misimp.jpg" alt="cover1" class="filmcover" >
+        <h1 class="filmtitle">Mission Impossible: Fallout</h1> 
+    </div>
+        <div class="result">
+        <img src="misimp.jpg" alt="cover1" class="filmcover" >
+        <h1 class="filmtitle">Mission Impossible: Fallout</h1>
+    </div>
+    <div class="result">
+        <img src="misimp.jpg" alt="cover1" class="filmcover" >
+        <h1 class="filmtitle">Mission Impossible: Fallout</h1> 
+    </div>
+</div>
+</div>
+                <div class="cat5">
+                    <div id="sliderout5" class="sliderout5"></div>
+                    <div id="labelout5" class="labelout5" style="padding-top:20px;">Horror</div>
+                </div>
+                <div class="cat6">
+                    <div id="sliderout6" class="sliderout6"></div>
+                    <div id="labelout6" class="labelout6" style="padding-top:20px;">SciFi</div>
+                </div>
+                <div class="cat7">
+                    <div id="sliderout7" class="sliderout7"></div>
+                    <div id="labelout7" class="labelout7" style="padding-top:20px;">Alter</div>
+                </div>
+                <div class="cat8">
+                    <div id="slider8" class="slider8"></div>
+                    <div id="label8" class="label8" style="padding-top:20px;">Musical</div>
+                </div>
+            </div>
+        </div>
+    </div>
+<script src="https://code.jquery.com/jquery-3.2.1.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/round-slider@1.5.1/dist/roundslider.min.js"></script>
+<link href="https://cdn.jsdelivr.net/npm/round-slider@1.5.2/dist/roundslider.min.css" rel="stylesheet" /> 
+<script>
+    var totalSliders = 4;
+var curveSize = 180;
+var distance = 8;
+var size = 15;
+var width = 4;
+
+
+$("#sliderout1").roundSlider({
+    sliderType: "min-range",
+    circleShape: "pie",
+    startAngle: "315",
+    lineCap: "round",
+    radius: radius,
+    width: width,
+    handleSize: "+0",
+    max: 100,
+    
+    svgMode: true,
+	  pathColor: "#eee",
+	  borderWidth: 0,
+    
+	  startValue: 0,
+    
+    valueChange: function (e) {
+    	var color = e.isInvertedRange ? "#e9a936" : "#36bcff";
+      
+      $("#sliderout1").roundSlider({ "rangeColor": color, "tooltipColor": color });
+    }
+});
+
+var sliderObj = $("#sliderout1").data("roundSlider");
+sliderObj.setValue(30);
+
+
+$("#sliderout2").roundSlider({ 
+  svgMode: true,
+  sliderType: "min-range",
+  width: width,
+  radius: size,
+  handleSize: "+6",
+  borderWidth: 0,
+  value: 8,
+  startAngle: 90,
+  max: "10",
+  readOnly: true,
+});
+$("#sliderout3").roundSlider({ 
+  svgMode: true,
+  sliderType: "min-range",
+  width: width,
+  radius: size,
+  handleSize: "+6",
+  borderWidth: 0,
+  value: 8,
+  startAngle: 90,
+  max: "10",
+  readOnly: true,
+});
+$("#sliderout4").roundSlider({ 
+  svgMode: true,
+  sliderType: "min-range",
+  width: width,
+  radius: size,
+  handleSize: "+6",
+  borderWidth: 0,
+  value: 8,
+  startAngle: 90,
+  max: "10",
+  readOnly: true,
+});
+$("#sliderout5").roundSlider({ 
+  svgMode: true,
+  sliderType: "min-range",
+  width: width,
+  radius: size,
+  handleSize: "+6",
+  borderWidth: 0,
+  value: 8,
+  startAngle: 90,
+  max: "10",
+  readOnly: true,
+});
+$("#sliderout6").roundSlider({ 
+  svgMode: true,
+  sliderType: "min-range",
+  width: width,
+  radius: size,
+  handleSize: "+6",
+  borderWidth: 0,
+  value: 8,
+  startAngle: 90,
+  max: "10",
+  readOnly: true,
+});
+$("#sliderout7").roundSlider({ 
+  svgMode: true,
+  sliderType: "min-range",
+  width: width,
+  radius: size,
+  handleSize: "+6",
+  borderWidth: 0,
+  value: 8,
+  startAngle: 90,
+  max: "18",
+  readOnly: true,
+});
+$("#sliderout8").roundSlider({ 
+  svgMode: true,
+  sliderType: "min-range",
+  width: width,
+  radius: size,
+  handleSize: "+6",
+  borderWidth: 0,
+  value: 8,
+  startAngle: 90,
+  max: "10",
+  readOnly: true,
+});
+</script>
+</body>
+</html>

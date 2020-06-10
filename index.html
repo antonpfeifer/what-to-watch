@@ -1,0 +1,391 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto">
+    <link href="https://cdn.jsdelivr.net/npm/round-slider@1.5.1/dist/roundslider.min.css" rel="stylesheet" />>
+    <link rel="stylesheet" href="app.scss">
+
+<title>what-to-watch</title>
+</head>
+
+<head>
+    <link href="https://unpkg.com/material-components-web@latest/dist/material-components-web.min.css" rel="stylesheet">
+    <script src="https://unpkg.com/material-components-web@latest/dist/material-components-web.min.js"></script>
+</head>
+
+<head>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
+</head>
+
+
+<body>
+<div class="box_search">
+    <div class="search">
+        <input type="text" placeholder="Filme suchen...">
+    </div>
+    <div class="dropdown">
+      <img src="profile.png" alt="Profile" width="50" height="50" onclick="myFunction()" class="dropbtn">
+    <div id="myDropdown" class="dropdown-content">
+      <p href="#home">Mein Profil</p>
+      <p href="#about">Meine Liste</p>
+      <p href="#contact">Selbstzerstörung</p>
+    </div>
+  </div>
+    <div class="settings">
+        <img src="settings.png" alt="Settings" width="40" height="40">
+    </div>
+</div>
+
+<div class="header">
+    <h1 style="font-size:70px;text-align:center;text-shadow: black;">Was möchtest du heute schauen?</h1>
+</div>
+
+<div class="description">
+    <p style="font-size:20px;text-align:center;">Wähle einfach deine Einstellungen aus den Reglern und drücke dann auf Suchen.</p>
+</div>
+
+<div class="box0">
+<div class="box1">
+    <div class="cat1">
+        <div id="slider1" ></div>
+        <div id="label1" class="label1" style="padding-top:20px;">Action</div>
+    </div>
+    <div class="cat2">
+        <div id="slider2"></div>
+        <div id="label2" class="label2" style="padding-top:20px;">Drama</div>
+    </div>
+    <div class="cat3">
+        <div id="slider3"></div>
+        <div id="label3" class="label3" style="padding-top:20px;">Fantasy</div>
+    </div>
+    <div class="cat4">
+        <div id="slider4"></div>
+        <div id="label4" class="label4" style="padding-top:20px;">Komödie</div>
+    </div>
+    <div class="cat5">
+        <div id="slider5"></div>
+        <div id="label5" class="label5" style="padding-top:20px;">Horror</div>
+    </div>
+    <div class="cat6">
+        <div id="slider6"></div>
+        <div id="label6" class="label6" style="padding-top:20px;">SciFi</div>
+    </div>
+    <div class="cat7">
+        <div id="slider7"></div>
+        <div id="label7" class="label7" style="padding-top:20px;">Alter</div>
+    </div>
+    <div class="cat8">
+        <div id="slider8"></div>
+        <div id="label8" class="label8" style="padding-top:20px;">Musical</div>
+    </div>
+</div>
+</div>
+
+<div class="tickheader">
+    <p>Streamingdienste</p>
+</div>
+<div class="tickboxes">
+  <b id="button" title="button">
+    <img src="netflix.jfif" style="border-radius: 8px;">
+  </b>
+  <b id="button" title="button">
+    <img src="amazon.jfif" style="border-radius: 8px;">
+  </b>
+  <b id="button" title="button">
+    <img src="disney.jfif" style="border-radius: 8px;">
+  </b>
+  <b id="button" title="button">
+    <img src="apple.jfif" style="border-radius: 8px;">
+  </b>
+</div>
+<div class="tickheader">
+    <p>Herkunftsland</p>
+</div>
+<div class="tickboxes">
+  <a id="button" title="button">USA</a>
+  <a id="button" title="button">England</a>
+  <a id="button" title="button">Indien</a>
+  <a id="button" title="button">Deutschland</a>
+  <a id="button" title="button">Frankreich</a>
+    </div>
+    <div class="tickheader">
+      <p>Sonstiges</p>
+  </div>
+  <div class="tickboxes">
+    <a id="button" title="button">Familienfreundlich</a>
+    <a id="button" title="button">Animation/Zeichentrick</a>
+    <a id="button" title="button">Wahre Begebenheit</a>
+    <a id="button" title="button">Dokumantation</a>
+    <a id="button" title="button">egal</a>
+      </div>
+<div class="boxbutton">
+<button class="button" onclick="myFunction()"><span>Suchen </span></button>
+</div>
+
+<script>
+    function myFunction() { 
+      document.getElementById("test").innerHTML = "Wir suchen nach deinen Filmen!";
+    }
+</script>  
+<script src="https://code.jquery.com/jquery-3.2.1.js"></script>                      
+<link href="https://cdn.jsdelivr.net/npm/round-slider@1.5.2/dist/roundslider.min.css" rel="stylesheet" />                       
+<script src="https://cdn.jsdelivr.net/npm/round-slider@1.5.2/dist/roundslider.min.js"></script>
+<script>
+    mdc.ripple.MDCRipple.attachTo(document.querySelector('.foo-button'));
+</script>
+<script>
+import {MDCFormField} from '@material/form-field';
+import {MDCCheckbox} from '@material/checkbox';
+
+const checkbox = new MDCCheckbox(document.querySelector('.mdc-checkbox'));
+const formField = new MDCFormField(document.querySelector('.mdc-form-field'));
+formField.input = checkbox;
+</script>
+<script>
+var totalSliders = 4;
+var curveSize = 180;
+var distance = 8;
+var width = 15;
+var radius = 80;
+
+$("#slider1").roundSlider({
+    sliderType: "min-range",
+    circleShape: "pie",
+    startAngle: "315",
+    lineCap: "round",
+    radius: radius,
+    width: width,
+    handleSize: "+0",
+    max: 100,
+    
+    svgMode: true,
+	  pathColor: "#eee",
+	  borderWidth: 0,
+    
+	  startValue: 0,
+    
+    valueChange: function (e) {
+    	var color = e.isInvertedRange ? "#e9a936" : "#36bcff";
+      
+      $("#slider1").roundSlider({ "rangeColor": color, "tooltipColor": color });
+    }
+});
+
+var sliderObj = $("#slider1").data("roundSlider");
+sliderObj.setValue(30);
+
+
+$("#slider2").roundSlider({
+    sliderType: "min-range",
+    circleShape: "pie",
+    startAngle: "315",
+    lineCap: "round",
+    radius: radius,
+    width: width,
+    handleSize: "+0",
+    max: 100,
+    
+    svgMode: true,
+	  pathColor: "#eee",
+	  borderWidth: 0,
+    
+	  startValue: 0,
+    
+    valueChange: function (e) {
+    	var color = e.isInvertedRange ? "#e9a936" : "#f00";
+      
+      $("#slider2").roundSlider({ "rangeColor": color, "tooltipColor": color });
+    }
+});
+
+var sliderObj = $("#slider2").data("roundSlider");
+sliderObj.setValue(30);
+
+$("#slider3").roundSlider({
+    sliderType: "min-range",
+    circleShape: "pie",
+    startAngle: "315",
+    lineCap: "round",
+    radius: radius,
+    width: width,
+    handleSize: "+0",
+    max: 100,
+    
+    svgMode: true,
+	  pathColor: "#eee",
+	  borderWidth: 0,
+    
+	  startValue: 0,
+    
+    valueChange: function (e) {
+    	var color = e.isInvertedRange ? "#e9a936" : "#ff0";
+      
+      $("#slider3").roundSlider({ "rangeColor": color, "tooltipColor": "#fff" });
+    }
+});
+
+var sliderObj = $("#slider3").data("roundSlider");
+sliderObj.setValue(30);
+$("#slider4").roundSlider({
+    sliderType: "min-range",
+    circleShape: "pie",
+    startAngle: "315",
+    lineCap: "round",
+    radius: radius,
+    width: width,
+    handleSize: "+0",
+    max: 100,
+    
+    svgMode: true,
+	  pathColor: "#eee",
+	  borderWidth: 0,
+    
+	  startValue: 0,
+    
+    valueChange: function (e) {
+    	var color = e.isInvertedRange ? "#e9a936" : "#0f0";
+      
+      $("#slider4").roundSlider({ "rangeColor": color, "tooltipColor": color });
+    }
+});
+
+var sliderObj = $("#slider4").data("roundSlider");
+sliderObj.setValue(30);
+$("#slider5").roundSlider({
+    sliderType: "min-range",
+    circleShape: "pie",
+    startAngle: "315",
+    lineCap: "round",
+    radius: radius,
+    width: width,
+    handleSize: "+0",
+    max: 100,
+    
+    svgMode: true,
+	  pathColor: "#eee",
+	  borderWidth: 0,
+    
+	  startValue: 0,
+    
+    valueChange: function (e) {
+    	var color = e.isInvertedRange ? "#e9a936" : "#e9ff36";
+      
+      $("#slider5").roundSlider({ "rangeColor": color, "tooltipColor": color });
+    }
+});
+
+var sliderObj = $("#slider5").data("roundSlider");
+sliderObj.setValue(30);
+$("#slider6").roundSlider({
+    sliderType: "min-range",
+    circleShape: "pie",
+    startAngle: "315",
+    lineCap: "round",
+    radius: radius,
+    width: width,
+    handleSize: "+0",
+    max: 100,
+    
+    svgMode: true,
+	  pathColor: "#eee",
+	  borderWidth: 0,
+    
+	  startValue: 0,
+    
+    valueChange: function (e) {
+    	var color = e.isInvertedRange ? "#e9a936" : "#e9ff36";
+      
+      $("#slider6").roundSlider({ "rangeColor": color, "tooltipColor": color });
+    }
+});
+
+var sliderObj = $("#slider6").data("roundSlider");
+sliderObj.setValue(30);
+$("#slider7").roundSlider({
+    sliderType: "min-range",
+    circleShape: "pie",
+    startAngle: "315",
+    lineCap: "round",
+    radius: radius,
+    width: width,
+    handleSize: "+0",
+    max: 100,
+    
+    svgMode: true,
+	  pathColor: "#eee",
+	  borderWidth: 0,
+    
+	  startValue: 0,
+    
+    valueChange: function (e) {
+    	var color = e.isInvertedRange ? "#e9a936" : "#e9ff36";
+      
+      $("#slider7").roundSlider({ "rangeColor": color, "tooltipColor": color });
+    }
+});
+
+var sliderObj = $("#slider7").data("roundSlider");
+sliderObj.setValue(30);
+$("#slider8").roundSlider({
+    sliderType: "min-range",
+    circleShape: "pie",
+    startAngle: "315",
+    lineCap: "round",
+    radius: radius,
+    width: width,
+    handleSize: "+0",
+    max: 100,
+    
+    svgMode: true,
+	  pathColor: "#eee",
+	  borderWidth: 0,
+    
+	  startValue: 0,
+    
+    valueChange: function (e) {
+    	var color = e.isInvertedRange ? "#e9a936" : "#e9ff36";
+      
+      $("#slider8").roundSlider({ "rangeColor": color, "tooltipColor": color });
+    }
+});
+
+var sliderObj = $("#slider8").data("roundSlider");
+sliderObj.setValue(30);
+</script>
+<script>
+  $(document).ready(function() {
+  $('a#button').click(function() {
+    $(this).toggleClass("down");
+  });
+});
+$(document).ready(function() {
+  $('b#button').click(function() {
+    $(this).toggleClass("down");
+  });
+});
+</script>
+<script>
+  /* When the user clicks on the button, 
+  toggle between hiding and showing the dropdown content */
+  function myFunction() {
+    document.getElementById("myDropdown").classList.toggle("show");
+  }
+  
+  // Close the dropdown if the user clicks outside of it
+  window.onclick = function(event) {
+    if (!event.target.matches('.dropbtn')) {
+      var dropdowns = document.getElementsByClassName("dropdown-content");
+      var i;
+      for (i = 0; i < dropdowns.length; i++) {
+        var openDropdown = dropdowns[i];
+        if (openDropdown.classList.contains('show')) {
+          openDropdown.classList.remove('show');
+        }
+      }
+    }
+  }
+  </script>
+
+
+</body>
+</html>

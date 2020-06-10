@@ -1,0 +1,306 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto">
+    <link href="https://cdn.jsdelivr.net/npm/round-slider@1.5.1/dist/roundslider.min.css" rel="stylesheet" />>
+    <link rel="stylesheet" href="app.scss">
+
+<title>what-to-watch</title>
+</head>
+
+<head>
+    <link href="https://unpkg.com/material-components-web@latest/dist/material-components-web.min.css" rel="stylesheet">
+    <script src="https://unpkg.com/material-components-web@latest/dist/material-components-web.min.js"></script>
+</head>
+
+<head>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
+</head>
+
+
+<body>
+<div class="box_search">
+    <div class="search">
+        <input type="text" placeholder="Filme suchen...">
+    </div>
+    <div class="profile">
+        <img src="profile.png" alt="Profile" width="50" height="50">
+    </div>
+    <div class="settings">
+        <img src="settings.png" alt="Settings" width="40" height="40">
+    </div>
+</div>
+
+<div class="header">
+    <h1 style="font-size:70px;text-align:center;">Was möchtest du heute schauen?</h1>
+</div>
+
+<div class="description">
+    <p style="font-size:20px;text-align:center;">Wähle einfach deine Einstellungen aus den Reglern und drücke dann auf Suchen.</p>
+</div>
+
+<div class="box0">
+<div class="box1">
+    <div class="cat1">
+        <div id="slider1" class="slider1"></div>
+        <div id="label1" class="label1" style="padding-top:20px;">Action</div>
+    </div>
+    <div class="cat2">
+        <div id="slider2" class="slider2"></div>
+        <div id="label2" class="label2" style="padding-top:20px;">Drama</div>
+    </div>
+    <div class="cat3">
+        <div id="slider3" class="slider3"></div>
+        <div id="label3" class="label3" style="padding-top:20px;">Fantasy</div>
+    </div>
+    <div class="cat4">
+        <div id="slider4" class="slider4"></div>
+        <div id="label4" class="label4" style="padding-top:20px;">Komödie</div>
+    </div>
+    <div class="cat5">
+        <div id="slider5" class="slider5"></div>
+        <div id="label5" class="label5" style="padding-top:20px;">Horror</div>
+    </div>
+    <div class="cat6">
+        <div id="slider6" class="slider6"></div>
+        <div id="label6" class="label6" style="padding-top:20px;">SciFi</div>
+    </div>
+    <div class="cat7">
+        <div id="slider7" class="slider7"></div>
+        <div id="label7" class="label7" style="padding-top:20px;">Alter</div>
+    </div>
+    <div class="cat8">
+        <div id="slider8" class="slider8"></div>
+        <div id="label8" class="label8" style="padding-top:20px;">Musical</div>
+    </div>
+</div>
+</div>
+
+<div class="tickheader">
+    <p>Streamingdienste</p>
+</div>
+<div class="tickboxes">
+<label class="container">Netflix
+    <input type="checkbox" checked="checked">
+    <span class="checkmark"></span>
+  </label>
+  
+  <label class="container">Amazon Prime
+    <input type="checkbox">
+    <span class="checkmark"></span>
+  </label>
+  
+  <label class="container">Disney+
+    <input type="checkbox">
+    <span class="checkmark"></span>
+  </label>
+  
+  <label class="container">Apple TV+
+    <input type="checkbox">
+    <span class="checkmark"></span>
+  </label>
+</div>
+<div class="tickheader">
+    <p>Herkunftsland</p>
+</div>
+<div class="tickboxes">
+    <label class="container">USA
+        <input type="checkbox" checked="checked">
+        <span class="checkmark"></span>
+      </label>
+      
+      <label class="container">England
+        <input type="checkbox">
+        <span class="checkmark"></span>
+      </label>
+      
+      <label class="container">Deutschland
+        <input type="checkbox">
+        <span class="checkmark"></span>
+      </label>
+      
+      <label class="container">Indien
+        <input type="checkbox">
+        <span class="checkmark"></span>
+      </label>
+      <label class="container">Frankreich
+        <input type="checkbox">
+        <span class="checkmark"></span>
+      </label>
+    </div>
+<div class="tickboxes">
+    <div class="radiosection">
+        <div class="radiolabel">Animation/Zeichentrick</div>
+    <div class="radio">
+        <label class="container_radio1">Ja
+            <input type="radio" checked="checked" name="radio1">
+            <span class="checkmark_radio1"></span>
+          </label>
+          <label class="container_radio1">Nein
+            <input type="radio" name="radio1">
+            <span class="checkmark_radio1"></span>
+          </label>
+          <label class="container_radio1">Egal
+            <input type="radio" name="radio1">
+            <span class="checkmark_radio1"></span>
+          </label>
+        </div>
+    </div>
+    <div class="radiosection">
+        <div class="radiolabel">Familienfreundlich</div>
+    <div class="radio">
+        <label class="container_radio2">Ja
+            <input type="radio" checked="checked" name="radio2">
+            <span class="checkmark_radio2"></span>
+          </label>
+          <label class="container_radio2">Nein
+            <input type="radio" name="radio2">
+            <span class="checkmark_radio2"></span>
+          </label>
+          <label class="container_radio2">Egal
+            <input type="radio" name="radio2">
+            <span class="checkmark_radio2"></span>
+          </label>
+        </div>
+    </div>
+    <div class="radiosection">
+        <div class="radiolabel">wahre Begebenheiten
+        </div>
+    <div class="radio">
+        <label class="container_radio2">Ja
+            <input type="radio" checked="checked" name="radio3">
+            <span class="checkmark_radio2"></span>
+          </label>
+          <label class="container_radio2">Nein
+            <input type="radio" name="radio3">
+            <span class="checkmark_radio2"></span>
+          </label>
+          <label class="container_radio2">Egal
+            <input type="radio" name="radio3">
+            <span class="checkmark_radio2"></span>
+          </label>
+        </div>
+    </div>
+</div>
+<div class="boxbutton">
+<button class="button" onclick="myFunction()"><span>Suchen </span></button>
+</div>
+
+<script>
+    function myFunction() { 
+      document.getElementById("test").innerHTML = "Wir suchen nach deinen Filmen!";
+    }
+</script>
+<script src="https://code.jquery.com/jquery-3.2.1.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/round-slider@1.5.1/dist/roundslider.min.js"></script>
+<script>
+    mdc.ripple.MDCRipple.attachTo(document.querySelector('.foo-button'));
+</script>
+<script>
+import {MDCFormField} from '@material/form-field';
+import {MDCCheckbox} from '@material/checkbox';
+
+const checkbox = new MDCCheckbox(document.querySelector('.mdc-checkbox'));
+const formField = new MDCFormField(document.querySelector('.mdc-form-field'));
+formField.input = checkbox;
+</script>
+<script>
+var totalSliders = 4;
+var curveSize = 180;
+var distance = 8;
+
+
+$("#slider1").roundSlider({ 
+  svgMode: true,
+  sliderType: "min-range",
+  width: 16,
+  radius: 100,
+  handleSize: "+6",
+  borderWidth: 0,
+  value: 8,
+  startAngle: 90,
+  max: "10",
+  rangeColor: null,
+});
+$("#slider2").roundSlider({ 
+  svgMode: true,
+  sliderType: "min-range",
+  width: 16,
+  radius: 100,
+  handleSize: "+6",
+  borderWidth: 0,
+  value: 8,
+  startAngle: 90,
+  max: "10",
+});
+$("#slider3").roundSlider({ 
+  svgMode: true,
+  sliderType: "min-range",
+  width: 16,
+  radius: 100,
+  handleSize: "+6",
+  borderWidth: 0,
+  value: 8,
+  startAngle: 90,
+  max: "10",
+});
+$("#slider4").roundSlider({ 
+  svgMode: true,
+  sliderType: "min-range",
+  width: 16,
+  radius: 100,
+  handleSize: "+6",
+  borderWidth: 0,
+  value: 8,
+  startAngle: 90,
+  max: "10",
+});
+$("#slider5").roundSlider({ 
+  svgMode: true,
+  sliderType: "min-range",
+  width: 16,
+  radius: 100,
+  handleSize: "+6",
+  borderWidth: 0,
+  value: 8,
+  startAngle: 90,
+  max: "10",
+});
+$("#slider6").roundSlider({ 
+  svgMode: true,
+  sliderType: "min-range",
+  width: 16,
+  radius: 100,
+  handleSize: "+6",
+  borderWidth: 0,
+  value: 8,
+  startAngle: 90,
+  max: "10",
+});
+$("#slider7").roundSlider({ 
+  svgMode: true,
+  sliderType: "min-range",
+  width: 16,
+  radius: 100,
+  handleSize: "+6",
+  borderWidth: 0,
+  value: 8,
+  startAngle: 90,
+  max: "18",
+});
+$("#slider8").roundSlider({ 
+  svgMode: true,
+  sliderType: "min-range",
+  width: 16,
+  radius: 100,
+  handleSize: "+6",
+  borderWidth: 0,
+  value: 8,
+  startAngle: 90,
+  max: "10",
+});
+</script>
+
+
+</body>
+</html>
